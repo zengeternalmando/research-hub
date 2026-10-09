@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="集中阅读热点与 GitHub 日报，进入国内外内容监测、账号研究和商业验证工具。"
+    />
+    <title>研究工作台 · 热点与商业研究</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <svg
+      class="icon-definitions"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="report-icon" viewBox="0 0 24 24">
+        <path d="M5 3h10l4 4v14H5zM14 3v5h5M9 12h6M9 16h6" />
+      </symbol>
+      <symbol id="layers-icon" viewBox="0 0 24 24">
+        <path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5" />
+      </symbol>
+      <symbol id="account-icon" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" />
+        <path
+          d="M3 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6M18 15a5 5 0 0 1 3 5"
+        />
+      </symbol>
+      <symbol id="globe-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18" />
+      </symbol>
+      <symbol id="chart-icon" viewBox="0 0 24 24">
+        <path d="M4 3v17h17M8 16v-5M13 16V7M18 16V4" />
+      </symbol>
+      <symbol id="research-icon" viewBox="0 0 24 24">
+        <path
+          d="M9 3h6M10 3v6L4 19a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L14 9V3M8 14h8"
+        />
+      </symbol>
+      <symbol id="arrow-icon" viewBox="0 0 24 24">
+        <path d="M7 17 17 7M7 7h10v10" />
+      </symbol>
+      <symbol id="search-icon" viewBox="0 0 24 24">
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="m16 16 4 4" />
+      </symbol>
+    </svg>
+
+    <aside class="sidebar" aria-label="工作台导航">
+      <a class="brand" href="./" aria-label="研究工作台首页"
+        ><svg class="brand-symbol" aria-hidden="true">
+          <use href="#layers-icon" /></svg
+        ><span>研究工作台<small>Research desk</small></span></a
+      >
+      <p class="sidebar-label">每天，从这里开始</p>
+      <nav class="navigation">
+        <button class="nav-item active" data-view="reports" aria-current="page">
+          <svg aria-hidden="true"><use href="#report-icon" /></svg>今日报告<span
+            class="nav-count"
+            >2</span
+          >
+        </button>
+        <button class="nav-item" data-view="tools" data-category="all">
+          <svg aria-hidden="true"><use href="#layers-icon" /></svg>全部工具
+        </button>
+        <div class="nav-divider"></div>
+        <p class="sidebar-label">研究模块</p>
+        <button class="nav-item" data-view="tools" data-category="domestic">
+          <svg aria-hidden="true"><use href="#layers-icon" /></svg>国内内容监测
+        </button>
+        <button class="nav-item" data-view="tools" data-category="accounts">
+          <svg aria-hidden="true"><use href="#account-icon" /></svg>同类账号研究
+        </button>
+        <button class="nav-item" data-view="tools" data-category="overseas">
+          <svg aria-hidden="true"><use href="#globe-icon" /></svg>海外内容监测
+        </button>
+        <button class="nav-item" data-view="tools" data-category="commerce">
+          <svg aria-hidden="true"><use href="#chart-icon" /></svg>商业化验证
+        </button>
+        <button class="nav-item" data-view="agent">
+          <svg aria-hidden="true"><use href="#research-icon" /></svg>商业分析
+          Agent<span class="nav-pending">待接入</span>
+        </button>
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="availability-dot"></span>
+        <p>报告与工具，一处查看<small>外部工具保留各自的账号与服务</small></p>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <span id="breadcrumb">工作台 / 今日报告</span
+        ><a
+          href="https://github.com/zengeternalmando/research-hub"
+          target="_blank"
+          rel="noopener noreferrer"
+          >项目仓库<svg aria-hidden="true"><use href="#arrow-icon" /></svg
+        ></a>
+      </header>
+      <main id="main" tabindex="-1">
+        <section
+          id="reports-view"
+          class="view"
+          aria-labelledby="reports-heading"
+        >
+          <div class="page-heading">
+            <div>
+              <h1 id="reports-heading">先发现，再深入。</h1>
+              <p>热点、开源项目与内容研究，一个入口。</p>
+            </div>
+            <button class="text-button" data-view="tools" data-category="all">
+              浏览全部工具<svg aria-hidden="true">
+                <use href="#arrow-icon" />
+              </svg>
+            </button>
+          </div>
+          <div class="report-layout">
+            <section class="report-reader" aria-label="报告阅读区">
+              <div class="report-tabs" role="tablist" aria-label="选择报告">
+                <button
+                  id="trend-tab"
+                  class="report-tab selected"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="report-panel"
+                  data-report="trend"
+                >
+                  热点报告<span>TrendRadar</span>
+                </button>
+                <button
+                  id="github-tab"
+                  class="report-tab"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="report-panel"
+                  tabindex="-1"
+                  data-report="github"
+                >
+                  开源项目日报<span>GitHub Research</span>
+                </button>
+              </div>
+              <div class="reader-toolbar">
+                <p id="report-description">国内多平台热点与新闻筛选</p>
+                <div>
+                  <button id="refresh-report" class="small-button">刷新</button
+                  ><a
+                    id="open-report"
+                    class="small-link"
+                    href="https://zengeternalmando.github.io/TrendRadar/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >单独打开<svg aria-hidden="true">
+                      <use href="#arrow-icon" /></svg
+                  ></a>
+                </div>
+              </div>
+              <div
+                id="report-panel"
+                role="tabpanel"
+                aria-labelledby="trend-tab"
+                aria-busy="true"
+              >
+                <p
+                  id="report-status"
+                  class="report-status"
+                  role="status"
+                  aria-live="polite"
+                >
+                  正在读取热点报告…
+                </p>
+                <div id="report-error" class="report-error" hidden>
+                  <h2>报告暂时无法加载</h2>
+                  <p id="report-error-message"></p>
+                  <button id="retry-report" class="primary-button">
+                    重新加载
+                  </button>
+                </div>
+                <iframe
+                  id="report-frame"
+                  title="TrendRadar 热点报告"
+                  referrerpolicy="no-referrer"
+                  hidden
+                ></iframe>
+              </div>
+              <p id="report-cadence" class="reader-footnote">
+                约每小时更新 · TrendRadar 每 7 天需在 Actions 签到续期。
+              </p>
+            </section>
+            <aside class="research-guide" aria-label="研究路径与常用工具">
+              <h2>把发现变成判断</h2>
+              <ol class="research-path">
+                <li>
+                  <strong>看见变化</strong>
+                  <p>读热点与开源日报，发现新话题和工具。</p>
+                </li>
+                <li>
+                  <strong>找到对标</strong>
+                  <p>观察国内外账号与作品，梳理同类做法。</p>
+                </li>
+                <li>
+                  <strong>核对商业证据</strong>
+                  <p>在数据工具中查看商品、达人和投放线索。</p>
+                </li>
+              </ol>
+              <div class="guide-divider"></div>
+              <h3>常用入口</h3>
+              <a
+                class="shortcut"
+                href="https://github.com/3441293738/creatorhub"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>CreatorHub<small>国内内容监测 · 项目入口</small></span
+                ><svg aria-hidden="true"><use href="#arrow-icon" /></svg
+              ></a>
+              <a
+                class="shortcut"
+                href="https://ads.tiktok.com/creative/creativeCenter/trends?LanguageId=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>TikTok 趋势工具<small>海外热门标签与视频</small></span
+                ><svg aria-hidden="true"><use href="#arrow-icon" /></svg
+              ></a>
+              <a
+                class="shortcut"
+                href="https://www.qian-gua.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>千瓜数据<small>小红书商业验证 · 外部服务</small></span
+                ><svg aria-hidden="true"><use href="#arrow-icon" /></svg
+              ></a>
+              <button
+                class="directory-link"
+                data-view="tools"
+                data-category="all"
+              >
+                查看完整工具目录
+              </button>
+            </aside>
+          </div>
+        </section>
+
+        <section
+          id="tools-view"
+          class="view"
+          hidden
+          aria-labelledby="tools-heading"
+        >
+          <div class="page-heading">
+            <div>
+              <h1 id="tools-heading">你的研究工具目录</h1>
+              <p>按用途找到工具；入口状态代表实际接入程度。</p>
+            </div>
+          </div>
+          <div class="tools-controls">
+            <label class="search-field"
+              ><svg aria-hidden="true"><use href="#search-icon" /></svg
+              ><span class="sr-only">搜索工具名称、平台或用途</span
+              ><input
+                id="tool-search"
+                type="search"
+                placeholder="搜索工具、平台或用途"
+                autocomplete="off" /></label
+            ><label class="category-field"
+              ><span>研究模块</span
+              ><select id="category-select">
+                <option value="all">全部模块</option>
+                <option value="reports">热点与开源报告</option>
+                <option value="domestic">国内内容监测</option>
+                <option value="accounts">同类账号研究</option>
+                <option value="overseas">海外内容监测</option>
+                <option value="commerce">商业化验证</option>
+              </select></label
+            >
+          </div>
+          <p
+            id="tool-count"
+            class="directory-count"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <div class="directory-head" aria-hidden="true">
+            <span>工具与用途</span><span>接入状态</span><span>入口</span>
+          </div>
+          <div id="tool-list" class="tool-list"></div>
+          <div id="tools-empty" class="empty-state" hidden>
+            <h2>没有找到匹配的工具</h2>
+            <p>试试“抖音”“小红书”或“GitHub”，也可以清除筛选。</p>
+            <button id="clear-filters" class="primary-button">清除筛选</button>
+          </div>
+          <p class="directory-note">
+            “项目入口”通往开源项目，实际操作需要部署；“外部服务”在原网站使用，可能需要登录或订阅。工作台目前不会自动读取这些工具的账号数据。
+          </p>
+        </section>
+
+        <section
+          id="agent-view"
+          class="view"
+          hidden
+          aria-labelledby="agent-heading"
+        >
+          <div class="page-heading">
+            <div>
+              <h1 id="agent-heading">商业分析 Agent</h1>
+              <p>让结论有证据，让下一步可以验证。</p>
+            </div>
+            <span class="state-tag pending">尚未接入</span>
+          </div>
+          <article class="agent-brief">
+            <h2>接入后，它会怎样工作？</h2>
+            <p>
+              你提出研究问题，Agent
+              汇总可用资料，调用大模型分析，再输出带来源的商业判断与验证步骤。
+            </p>
+            <dl>
+              <div>
+                <dt>研究问题</dt>
+                <dd>例如：“AI 视频工具适合做什么生意？”</dd>
+              </div>
+              <div>
+                <dt>证据资料</dt>
+                <dd>
+                  热点与 GitHub 报告，以及你提供的竞品、价格、账号或商品数据。
+                </dd>
+              </div>
+              <div>
+                <dt>模型分析</dt>
+                <dd>通过服务端调用大模型 API，区分事实、推断和缺失信息。</dd>
+              </div>
+              <div>
+                <dt>最终报告</dt>
+                <dd>需求、竞品、变现方式与验证步骤，附数据来源。</dd>
+              </div>
+            </dl>
+            <p class="agent-status">
+              目前未配置模型密钥与商业报告任务；本页提供接入说明，尚不能生成商业分析。外部付费工具的数据也未接入。
+            </p>
+            <button class="primary-button" data-view="reports">
+              先阅读已有报告
+            </button>
+          </article>
+        </section>
+        <noscript
+          ><p>
+            请启用 JavaScript 以切换工具与报告。你仍可直接访问
+            <a href="https://zengeternalmando.github.io/TrendRadar/"
+              >热点报告</a
+            >
+            和
+            <a href="https://zengeternalmando.github.io/github-research/"
+              >GitHub 日报</a
+            >。
+          </p></noscript
+        >
+      </main>
+      <footer class="workspace-footer">
+        <span>研究工作台 · 公共报告与工具导航</span
+        ><span>有来源的发现，比孤立的结论更有用。</span>
+      </footer>
+    </div>
+  </body>
+</html>

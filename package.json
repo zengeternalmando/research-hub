@@ -1,0 +1,8 @@
+{
+  "name": "research-hub",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check app.js && node --test tests/*.test.js"
+  }
+}
