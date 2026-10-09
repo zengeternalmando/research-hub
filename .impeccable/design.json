@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T15:06:27.916Z",
+  "title": "Design System: 研究工作台",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Forest Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01892 174.21)",
+          "oklch(26.43% 0.01892 174.21)",
+          "oklch(37.86% 0.01892 174.21)",
+          "oklch(49.29% 0.01892 174.21)",
+          "oklch(60.71% 0.01892 174.21)",
+          "oklch(72.14% 0.01892 174.21)",
+          "oklch(83.57% 0.01892 174.21)",
+          "oklch(95.00% 0.01892 174.21)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01957 167.84)",
+          "oklch(26.43% 0.01957 167.84)",
+          "oklch(37.86% 0.01957 167.84)",
+          "oklch(49.29% 0.01957 167.84)",
+          "oklch(60.71% 0.01957 167.84)",
+          "oklch(72.14% 0.01957 167.84)",
+          "oklch(83.57% 0.01957 167.84)",
+          "oklch(95.00% 0.01957 167.84)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Reading Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.00538 117.92)",
+          "oklch(26.43% 0.00538 117.92)",
+          "oklch(37.86% 0.00538 117.92)",
+          "oklch(49.29% 0.00538 117.92)",
+          "oklch(60.71% 0.00538 117.92)",
+          "oklch(72.14% 0.00538 117.92)",
+          "oklch(83.57% 0.00538 117.92)",
+          "oklch(95.00% 0.00538 117.92)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White Plate",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine Divider",
+        "tonalRamp": [
+          "oklch(15.00% 0.01100 149.85)",
+          "oklch(26.43% 0.01100 149.85)",
+          "oklch(37.86% 0.01100 149.85)",
+          "oklch(49.29% 0.01100 149.85)",
+          "oklch(60.71% 0.01100 149.85)",
+          "oklch(72.14% 0.01100 149.85)",
+          "oklch(83.57% 0.01100 149.85)",
+          "oklch(95.00% 0.01100 149.85)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Forest Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.07695 163.87)",
+          "oklch(26.43% 0.07695 163.87)",
+          "oklch(37.86% 0.07695 163.87)",
+          "oklch(49.29% 0.07695 163.87)",
+          "oklch(60.71% 0.07695 163.87)",
+          "oklch(72.14% 0.07695 163.87)",
+          "oklch(83.57% 0.07695 163.87)",
+          "oklch(95.00% 0.07695 163.87)"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night Forest",
+        "tonalRamp": [
+          "oklch(15.00% 0.02178 176.05)",
+          "oklch(26.43% 0.02178 176.05)",
+          "oklch(37.86% 0.02178 176.05)",
+          "oklch(49.29% 0.02178 176.05)",
+          "oklch(60.71% 0.02178 176.05)",
+          "oklch(72.14% 0.02178 176.05)",
+          "oklch(83.57% 0.02178 176.05)",
+          "oklch(95.00% 0.02178 176.05)"
+        ]
+      },
+      "night-muted": {
+        "role": "neutral",
+        "displayName": "Night Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.02765 163.00)",
+          "oklch(26.43% 0.02765 163.00)",
+          "oklch(37.86% 0.02765 163.00)",
+          "oklch(49.29% 0.02765 163.00)",
+          "oklch(60.71% 0.02765 163.00)",
+          "oklch(72.14% 0.02765 163.00)",
+          "oklch(83.57% 0.02765 163.00)",
+          "oklch(95.00% 0.02765 163.00)"
+        ]
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01088 149.86)",
+          "oklch(26.43% 0.01088 149.86)",
+          "oklch(37.86% 0.01088 149.86)",
+          "oklch(49.29% 0.01088 149.86)",
+          "oklch(60.71% 0.01088 149.86)",
+          "oklch(72.14% 0.01088 149.86)",
+          "oklch(83.57% 0.01088 149.86)",
+          "oklch(95.00% 0.01088 149.86)"
+        ]
+      },
+      "warm": {
+        "role": "secondary",
+        "displayName": "Quiet Brass",
+        "tonalRamp": [
+          "oklch(15.00% 0.08670 82.36)",
+          "oklch(26.43% 0.08670 82.36)",
+          "oklch(37.86% 0.08670 82.36)",
+          "oklch(49.29% 0.08670 82.36)",
+          "oklch(60.71% 0.08670 82.36)",
+          "oklch(72.14% 0.08670 82.36)",
+          "oklch(83.57% 0.08670 82.36)",
+          "oklch(95.00% 0.08670 82.36)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Keyboard Focus",
+        "tonalRamp": [
+          "oklch(15.00% 0.11679 72.01)",
+          "oklch(26.43% 0.11679 72.01)",
+          "oklch(37.86% 0.11679 72.01)",
+          "oklch(49.29% 0.11679 72.01)",
+          "oklch(60.71% 0.11679 72.01)",
+          "oklch(72.14% 0.11679 72.01)",
+          "oklch(83.57% 0.11679 72.01)",
+          "oklch(95.00% 0.11679 72.01)"
+        ]
+      },
+      "nav-hover": {
+        "role": "neutral",
+        "displayName": "Navigation Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.03309 164.45)",
+          "oklch(26.43% 0.03309 164.45)",
+          "oklch(37.86% 0.03309 164.45)",
+          "oklch(49.29% 0.03309 164.45)",
+          "oklch(60.71% 0.03309 164.45)",
+          "oklch(72.14% 0.03309 164.45)",
+          "oklch(83.57% 0.03309 164.45)",
+          "oklch(95.00% 0.03309 164.45)"
+        ]
+      },
+      "nav-active": {
+        "role": "neutral",
+        "displayName": "Navigation Active",
+        "tonalRamp": [
+          "oklch(15.00% 0.03614 162.34)",
+          "oklch(26.43% 0.03614 162.34)",
+          "oklch(37.86% 0.03614 162.34)",
+          "oklch(49.29% 0.03614 162.34)",
+          "oklch(60.71% 0.03614 162.34)",
+          "oklch(72.14% 0.03614 162.34)",
+          "oklch(83.57% 0.03614 162.34)",
+          "oklch(95.00% 0.03614 162.34)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Action Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.06570 162.94)",
+          "oklch(26.43% 0.06570 162.94)",
+          "oklch(37.86% 0.06570 162.94)",
+          "oklch(49.29% 0.06570 162.94)",
+          "oklch(60.71% 0.06570 162.94)",
+          "oklch(72.14% 0.06570 162.94)",
+          "oklch(83.57% 0.06570 162.94)",
+          "oklch(95.00% 0.06570 162.94)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Stroke",
+        "tonalRamp": [
+          "oklch(15.00% 0.01976 157.77)",
+          "oklch(26.43% 0.01976 157.77)",
+          "oklch(37.86% 0.01976 157.77)",
+          "oklch(49.29% 0.01976 157.77)",
+          "oklch(60.71% 0.01976 157.77)",
+          "oklch(72.14% 0.01976 157.77)",
+          "oklch(83.57% 0.01976 157.77)",
+          "oklch(95.00% 0.01976 157.77)"
+        ]
+      },
+      "tag-bg": {
+        "role": "neutral",
+        "displayName": "Status Plate",
+        "tonalRamp": [
+          "oklch(15.00% 0.01130 141.26)",
+          "oklch(26.43% 0.01130 141.26)",
+          "oklch(37.86% 0.01130 141.26)",
+          "oklch(49.29% 0.01130 141.26)",
+          "oklch(60.71% 0.01130 141.26)",
+          "oklch(72.14% 0.01130 141.26)",
+          "oklch(83.57% 0.01130 141.26)",
+          "oklch(95.00% 0.01130 141.26)"
+        ]
+      },
+      "tag-ink": {
+        "role": "neutral",
+        "displayName": "Status Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.02868 154.35)",
+          "oklch(26.43% 0.02868 154.35)",
+          "oklch(37.86% 0.02868 154.35)",
+          "oklch(49.29% 0.02868 154.35)",
+          "oklch(60.71% 0.02868 154.35)",
+          "oklch(72.14% 0.02868 154.35)",
+          "oklch(83.57% 0.02868 154.35)",
+          "oklch(95.00% 0.02868 154.35)"
+        ]
+      },
+      "integrated-bg": {
+        "role": "neutral",
+        "displayName": "Integrated Plate",
+        "tonalRamp": [
+          "oklch(15.00% 0.01748 153.56)",
+          "oklch(26.43% 0.01748 153.56)",
+          "oklch(37.86% 0.01748 153.56)",
+          "oklch(49.29% 0.01748 153.56)",
+          "oklch(60.71% 0.01748 153.56)",
+          "oklch(72.14% 0.01748 153.56)",
+          "oklch(83.57% 0.01748 153.56)",
+          "oklch(95.00% 0.01748 153.56)"
+        ]
+      },
+      "integrated-ink": {
+        "role": "neutral",
+        "displayName": "Integrated Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.06894 157.37)",
+          "oklch(26.43% 0.06894 157.37)",
+          "oklch(37.86% 0.06894 157.37)",
+          "oklch(49.29% 0.06894 157.37)",
+          "oklch(60.71% 0.06894 157.37)",
+          "oklch(72.14% 0.06894 157.37)",
+          "oklch(83.57% 0.06894 157.37)",
+          "oklch(95.00% 0.06894 157.37)"
+        ]
+      },
+      "pending-bg": {
+        "role": "neutral",
+        "displayName": "Pending Plate",
+        "tonalRamp": [
+          "oklch(15.00% 0.02747 83.54)",
+          "oklch(26.43% 0.02747 83.54)",
+          "oklch(37.86% 0.02747 83.54)",
+          "oklch(49.29% 0.02747 83.54)",
+          "oklch(60.71% 0.02747 83.54)",
+          "oklch(72.14% 0.02747 83.54)",
+          "oklch(83.57% 0.02747 83.54)",
+          "oklch(95.00% 0.02747 83.54)"
+        ]
+      },
+      "pending-ink": {
+        "role": "neutral",
+        "displayName": "Pending Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.07894 73.12)",
+          "oklch(26.43% 0.07894 73.12)",
+          "oklch(37.86% 0.07894 73.12)",
+          "oklch(49.29% 0.07894 73.12)",
+          "oklch(60.71% 0.07894 73.12)",
+          "oklch(72.14% 0.07894 73.12)",
+          "oklch(83.57% 0.07894 73.12)",
+          "oklch(95.00% 0.07894 73.12)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Editorial Headline",
+        "purpose": "Serif view headings; 29px on mobile."
+      },
+      "title": {
+        "displayName": "Directory Title",
+        "purpose": "Tool names; 16px on mobile."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base text; compact explanatory contexts use 13–14px."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Navigation and main actions."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Source notes, statuses, and smaller links."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "view-reveal",
+        "value": "reveal 0.22s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Clip from inset(0 0 12px 0) to inset(0), only under prefers-reduced-motion: no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1600px"
+      },
+      {
+        "name": "guide-stack",
+        "value": "1200px"
+      },
+      {
+        "name": "mobile",
+        "value": "800px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Compact filled action, also used for recovery.",
+      "html": "<button class=\"ds-primary\">先阅读已有报告</button>",
+      "css": ".ds-primary{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;background:var(--accent,#236249);color:var(--white,#fff);border:0;border-radius:6px;padding:11px 20px;font-size:13px;min-height:44px;cursor:pointer}.ds-primary:hover{background:var(--action-hover,#194c37)}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-search input:focus-visible,.ds-nav button:focus-visible,.ds-tabs button:focus-visible,.ds-row a:focus-visible{outline:3px solid var(--focus,#b37b2a);outline-offset:4px}"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Quiet secondary navigation action.",
+      "html": "<button class=\"ds-text\">查看全部工具</button>",
+      "css": ".ds-text{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;display:inline-flex;align-items:center;gap:8px;background:none;border:0;color:var(--accent,#236249);padding:10px 0;font-size:13px;white-space:nowrap;cursor:pointer}.ds-text:hover{text-decoration:underline}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-search input:focus-visible,.ds-nav button:focus-visible,.ds-tabs button:focus-visible,.ds-row a:focus-visible{outline:3px solid var(--focus,#b37b2a);outline-offset:4px}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Search tools by name or research use.",
+      "html": "<label class=\"ds-search\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m16 16 5 5\"/></svg><input aria-label=\"搜索工具\" placeholder=\"搜索工具、平台或研究用途\"></label>",
+      "css": ".ds-search{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;display:flex;align-items:center;gap:10px;border:1px solid var(--field-border,#b7c5bc);border-radius:8px;padding:11px 14px;background:var(--white,#fff);max-width:480px;color:var(--muted,#57655f)}.ds-search svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;flex-shrink:0}.ds-search input{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;width:100%;min-width:0;background:transparent;border:0;color:var(--ink,#25322e);font-size:13px;caret-color:var(--accent,#236249)}.ds-search input::placeholder{color:var(--muted,#57655f)}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-search input:focus-visible,.ds-nav button:focus-visible,.ds-tabs button:focus-visible,.ds-row a:focus-visible{outline:3px solid var(--focus,#b37b2a);outline-offset:4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-item",
+      "description": "Forest rail with selected and hover states.",
+      "html": "<nav class=\"ds-nav\"><button class=\"ds-current\" aria-current=\"page\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M5 3h10l4 4v14H5zM14 3v5h5M9 12h6M9 16h6\"/></svg>今日报告</button><button>工具目录</button></nav>",
+      "css": ".ds-nav{background:var(--night,#182723);padding:18px;display:flex;flex-direction:column;gap:5px}.ds-nav button{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;display:flex;align-items:center;gap:11px;width:100%;padding:12px;border:0;border-radius:8px;background:transparent;color:var(--night-muted,#abc0b5);text-align:left;min-height:46px;font-size:13px;cursor:pointer}.ds-nav button:hover{background:var(--nav-hover,#263c32);color:var(--night-ink,#eaf1eb)}.ds-nav button.ds-current{background:var(--nav-active,#31493d);color:var(--white,#fff)}.ds-nav svg{width:20px;height:20px;fill:none;stroke:var(--warm,#e8c78a);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-search input:focus-visible,.ds-nav button:focus-visible,.ds-tabs button:focus-visible,.ds-row a:focus-visible{outline:3px solid var(--focus,#b37b2a);outline-offset:4px}"
+    },
+    {
+      "name": "Entry Status",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "A noninteractive status label with explicit text.",
+      "html": "<span class=\"ds-tag \">项目入口</span>",
+      "css": ".ds-tag{display:inline-block;padding:4px 8px;border-radius:5px;font-size:12px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;background:var(--tag-bg,#e5ebe4);color:var(--tag-ink,#48594d);white-space:nowrap}.ds-tag-integrated{background:var(--integrated-bg,#e2eee5);color:var(--integrated-ink,#225238)}.ds-tag-pending{background:var(--pending-bg,#f1e7d4);color:var(--pending-ink,#714f1e)}"
+    },
+    {
+      "name": "Integrated Status",
+      "kind": "chip",
+      "refersTo": "status-tag-integrated",
+      "description": "A noninteractive status label with explicit text.",
+      "html": "<span class=\"ds-tag ds-tag-integrated\">报告已接入</span>",
+      "css": ".ds-tag{display:inline-block;padding:4px 8px;border-radius:5px;font-size:12px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;background:var(--tag-bg,#e5ebe4);color:var(--tag-ink,#48594d);white-space:nowrap}.ds-tag-integrated{background:var(--integrated-bg,#e2eee5);color:var(--integrated-ink,#225238)}.ds-tag-pending{background:var(--pending-bg,#f1e7d4);color:var(--pending-ink,#714f1e)}"
+    },
+    {
+      "name": "Pending Status",
+      "kind": "chip",
+      "refersTo": "status-tag-pending",
+      "description": "A noninteractive status label with explicit text.",
+      "html": "<span class=\"ds-tag ds-tag-pending\">尚未接入</span>",
+      "css": ".ds-tag{display:inline-block;padding:4px 8px;border-radius:5px;font-size:12px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;background:var(--tag-bg,#e5ebe4);color:var(--tag-ink,#48594d);white-space:nowrap}.ds-tag-integrated{background:var(--integrated-bg,#e2eee5);color:var(--integrated-ink,#225238)}.ds-tag-pending{background:var(--pending-bg,#f1e7d4);color:var(--pending-ink,#714f1e)}"
+    },
+    {
+      "name": "Reading Surface",
+      "kind": "card",
+      "refersTo": "reading-surface",
+      "description": "Flat white container for report content or explanation.",
+      "html": "<article class=\"ds-plate\"><h2>接入说明</h2><p>结论有证据，下一步可以验证。</p></article>",
+      "css": ".ds-plate{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;background:var(--white,#fff);color:var(--ink,#25322e);border:1px solid var(--line,#dce3dd);border-radius:12px;padding:32px;max-width:820px}.ds-plate h2{font-size:20px;margin:0 0 16px}.ds-plate p{font-size:14px;color:var(--muted,#57655f);max-width:70ch;margin:0}"
+    },
+    {
+      "name": "Report Tabs",
+      "kind": "custom",
+      "description": "Pale tab strip with a selected green underline.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-selected\" role=\"tab\" aria-selected=\"true\">热点报告<span>TrendRadar</span></button><button role=\"tab\" aria-selected=\"false\">GitHub 日报<span>热门开源项目</span></button></div>",
+      "css": ".ds-tabs{display:flex;border-bottom:1px solid var(--line,#dce3dd);background:#edf1eb;padding:0 18px}.ds-tabs button{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;position:relative;border:0;background:transparent;color:var(--muted,#57655f);padding:16px 22px 14px;text-align:left;min-height:70px;font-size:14px;font-weight:600;cursor:pointer}.ds-tabs span{display:block;font-size:12px;letter-spacing:.025em;font-weight:400;margin-top:2px}.ds-tabs button:hover,.ds-tabs .ds-selected{color:var(--accent,#236249)}.ds-tabs .ds-selected:after{content:\"\";position:absolute;bottom:0;left:22px;right:22px;height:2px;background:var(--accent,#236249)}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-search input:focus-visible,.ds-nav button:focus-visible,.ds-tabs button:focus-visible,.ds-row a:focus-visible{outline:3px solid var(--focus,#b37b2a);outline-offset:4px}"
+    },
+    {
+      "name": "Directory Row",
+      "kind": "custom",
+      "description": "Divided information, status, and entry columns.",
+      "html": "<article class=\"ds-row\"><div><h2>TrendRadar</h2><p>阅读已部署的热点报告。</p></div><span class=\"ds-tag ds-tag-integrated\">报告已接入</span><a href=\"#report\">在此阅读</a></article>",
+      "css": ".ds-row{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;display:grid;grid-template-columns:minmax(0,1fr) 130px 130px;gap:24px;align-items:center;padding:24px 20px;border-bottom:1px solid var(--line,#dce3dd);color:var(--ink,#25322e)}.ds-row:hover{background:#edf2eb}.ds-row h2{font-size:17px;font-weight:600;margin:0 0 7px}.ds-row p{font-size:12px;color:var(--muted,#57655f);max-width:70ch;margin:0}.ds-row a{display:inline-flex;align-items:center;min-height:40px;font-size:12px;color:var(--accent,#236249);text-decoration:none}.ds-row a:hover{text-decoration:underline}.ds-tag{display:inline-block;padding:4px 8px;border-radius:5px;font-size:12px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;background:var(--tag-bg,#e5ebe4);color:var(--tag-ink,#48594d);white-space:nowrap}.ds-tag-integrated{background:var(--integrated-bg,#e2eee5);color:var(--integrated-ink,#225238)}.ds-tag-pending{background:var(--pending-bg,#f1e7d4);color:var(--pending-ink,#714f1e)}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-search input:focus-visible,.ds-nav button:focus-visible,.ds-tabs button:focus-visible,.ds-row a:focus-visible{outline:3px solid var(--focus,#b37b2a);outline-offset:4px}@media(max-width:800px){.ds-row{grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:20px 0}.ds-row>div{grid-column:1/-1}.ds-row a{justify-self:end}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Editorial Research Notebook",
+    "overview": "Dark forest navigation frames a cool, light reading workspace. The visual language is quiet and practical: a serif headline introduces each view, while compact sans-serif controls and metadata support sustained reading.\n\nDepth comes from distinct surface tones and fine dividers. Tool entries use aligned directory rows; large white containers hold reading content or a detailed explanation. Public report pages retain their own visual systems inside the embedded reader.",
+    "keyCharacteristics": [
+      "Dark navigation beside light reading surfaces.",
+      "Editorial serif headings with compact sans-serif controls.",
+      "Forest-green actions and restrained brass accents.",
+      "Flat surfaces, fine dividers, and modest rounded corners."
+    ],
+    "rules": [
+      {
+        "name": "The Surface Contrast Rule",
+        "body": "Preserve the dark navigation and light reading relationship.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do retain dark navigation beside light reading surfaces.",
+      "Do use serif type for view headlines and sans-serif type for controls and prose.",
+      "Do keep keyboard focus visible and respect reduced-motion preferences.",
+      "Do distinguish connected reports, external entries, and pending capabilities through clear text and status treatment."
+    ],
+    "donts": [
+      "Don't add shadows or hover lift to the flat reading containers.",
+      "Don't turn every tool directory row into a promotional card.",
+      "Don't replace readable status text with color alone."
+    ]
+  }
+}
