@@ -26,7 +26,7 @@ jobs:
       - name: Prepare public files
         run: |
           mkdir dist
-          cp index.html styles.css app.js dist/
+          cp index.html styles.css app.js integrations.js dist/
           cp -r assets dist/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

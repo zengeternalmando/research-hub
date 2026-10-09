@@ -58,6 +58,7 @@ a:hover {
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
+textarea:focus-visible,
 select:focus-visible {
   outline: 3px solid #b37b2a;
   outline-offset: 4px;
@@ -302,7 +303,7 @@ p {
 }
 .report-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
+  grid-template-columns: minmax(0, 1fr);
   gap: 28px;
   align-items: start;
 }
@@ -439,93 +440,6 @@ p {
   font-size: 11px;
   color: var(--muted);
   background: #fafbf8;
-}
-.research-guide {
-  padding: 8px 0;
-}
-.research-guide h2 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-.research-path {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  counter-reset: path;
-}
-.research-path li {
-  position: relative;
-  padding-left: 28px;
-  padding-bottom: 24px;
-  counter-increment: path;
-}
-.research-path li::before {
-  content: counter(path);
-  position: absolute;
-  left: 0;
-  top: 1px;
-  color: var(--accent);
-  font-size: 11px;
-  font-variant-numeric: tabular-nums;
-}
-.research-path li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 25px;
-  bottom: 8px;
-  width: 1px;
-  background: var(--line);
-}
-.research-path strong {
-  font-size: 13px;
-  font-weight: 600;
-}
-.research-path p {
-  font-size: 12px;
-  color: var(--muted);
-  margin: 5px 0 0;
-  max-width: 30ch;
-}
-.guide-divider {
-  border-top: 1px solid var(--line);
-  margin: 4px 0 24px;
-}
-.research-guide h3 {
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 14px;
-}
-.shortcut {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
-  font-size: 13px;
-}
-.shortcut small {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 4px;
-}
-.shortcut svg {
-  width: 16px;
-  height: 16px;
-  margin-top: 3px;
-  color: var(--muted);
-}
-.directory-link {
-  padding: 16px 0;
-  border: 0;
-  background: none;
-  color: var(--accent);
-  font-size: 12px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 .tools-controls {
   display: flex;
@@ -754,7 +668,7 @@ p {
     padding-top: 44px;
   }
   .report-layout {
-    grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 36px;
   }
   .sidebar {
@@ -767,37 +681,6 @@ p {
 @media (max-width: 1200px) {
   .report-layout {
     grid-template-columns: minmax(0, 1fr);
-  }
-  .research-guide {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 28px;
-    border-top: 1px solid var(--line);
-    padding-top: 24px;
-  }
-  .research-guide h2,
-  .research-path {
-    grid-column: 1;
-  }
-  .research-guide h2 {
-    grid-row: 1;
-  }
-  .research-path {
-    grid-row: 2/6;
-  }
-  .guide-divider {
-    display: none;
-  }
-  .research-guide h3 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .shortcut,
-  .directory-link {
-    grid-column: 2;
-  }
-  .research-path li {
-    padding-bottom: 20px;
   }
   .tool-row,
   .directory-head {
@@ -924,27 +807,6 @@ p {
   #report-panel {
     min-height: 500px;
   }
-  .research-guide {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .research-guide h2,
-  .research-guide h3,
-  .research-path,
-  .shortcut,
-  .directory-link {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .research-path {
-    margin-bottom: 10px;
-  }
-  .research-path p {
-    max-width: 60ch;
-  }
-  .research-guide h3 {
-    margin: 14px 0 0;
-  }
   .tools-controls {
     align-items: stretch;
     flex-direction: column;
@@ -1016,3 +878,15 @@ p {
     }
   }
 }
+
+.integration-form { max-width: 920px; display: flex; flex-direction: column; gap: 12px; }
+.integration-form input, .integration-form select, .integration-form textarea { width: 100%; padding: 12px; border: 1px solid var(--line); background: var(--white); color: var(--ink); border-radius: 3px; }
+.integration-form textarea { resize: vertical; font: inherit; }
+.integration-form label { font-weight: 600; }
+.integration-form p { margin: 0 0 8px; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.analysis-output { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.8; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+#agent-view .agent-brief + .agent-brief,
+#settings-view .agent-brief + .agent-brief { margin-top: 24px; }
+#analysis-history button { display: block; margin: 12px 0; text-align: left; }

@@ -1,2 +1,5 @@
 .preview/
 .impeccable/review/
+
+.wrangler/
+backend/.wrangler/

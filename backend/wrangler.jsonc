@@ -1,0 +1,8 @@
+{
+  "name": "research-hub-api",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [{"binding":"STATE","id":"5a463aa75161442782d5c362f871b3dd"}],
+  "observability": {"enabled":true,"head_sampling_rate":0.1}
+}

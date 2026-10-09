@@ -85,8 +85,9 @@
         </button>
         <button class="nav-item" data-view="agent">
           <svg aria-hidden="true"><use href="#research-icon" /></svg>商业分析
-          Agent<span class="nav-pending">待接入</span>
+          Agent
         </button>
+        <button class="nav-item" data-view="settings"><svg aria-hidden="true"><use href="#research-icon" /></svg>统一 API 设置</button>
       </nav>
       <div class="sidebar-bottom">
         <span class="availability-dot"></span>
@@ -193,56 +194,7 @@
                 约每小时更新 · TrendRadar 每 7 天需在 Actions 签到续期。
               </p>
             </section>
-            <aside class="research-guide" aria-label="研究路径与常用工具">
-              <h2>把发现变成判断</h2>
-              <ol class="research-path">
-                <li>
-                  <strong>看见变化</strong>
-                  <p>读热点与开源日报，发现新话题和工具。</p>
-                </li>
-                <li>
-                  <strong>找到对标</strong>
-                  <p>观察国内外账号与作品，梳理同类做法。</p>
-                </li>
-                <li>
-                  <strong>核对商业证据</strong>
-                  <p>在数据工具中查看商品、达人和投放线索。</p>
-                </li>
-              </ol>
-              <div class="guide-divider"></div>
-              <h3>常用入口</h3>
-              <a
-                class="shortcut"
-                href="https://github.com/3441293738/creatorhub"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span>CreatorHub<small>国内内容监测 · 项目入口</small></span
-                ><svg aria-hidden="true"><use href="#arrow-icon" /></svg
-              ></a>
-              <a
-                class="shortcut"
-                href="https://ads.tiktok.com/creative/creativeCenter/trends?LanguageId=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span>TikTok 趋势工具<small>海外热门标签与视频</small></span
-                ><svg aria-hidden="true"><use href="#arrow-icon" /></svg
-              ></a>
-              <a
-                class="shortcut"
-                href="https://www.qian-gua.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span>千瓜数据<small>小红书商业验证 · 外部服务</small></span
-                ><svg aria-hidden="true"><use href="#arrow-icon" /></svg
-              ></a>
-              <button
-                class="directory-link"
-                data-view="tools"
-                data-category="all"
-              >
-                查看完整工具目录
-              </button>
-            </aside>
+
           </div>
         </section>
 
@@ -310,41 +262,41 @@
               <h1 id="agent-heading">商业分析 Agent</h1>
               <p>让结论有证据，让下一步可以验证。</p>
             </div>
-            <span class="state-tag pending">尚未接入</span>
+            <span class="state-tag pending" id="agent-connection">等待连接后台</span>
           </div>
-          <article class="agent-brief">
-            <h2>接入后，它会怎样工作？</h2>
-            <p>
-              你提出研究问题，Agent
-              汇总可用资料，调用大模型分析，再输出带来源的商业判断与验证步骤。
-            </p>
-            <dl>
-              <div>
-                <dt>研究问题</dt>
-                <dd>例如：“AI 视频工具适合做什么生意？”</dd>
-              </div>
-              <div>
-                <dt>证据资料</dt>
-                <dd>
-                  热点与 GitHub 报告，以及你提供的竞品、价格、账号或商品数据。
-                </dd>
-              </div>
-              <div>
-                <dt>模型分析</dt>
-                <dd>通过服务端调用大模型 API，区分事实、推断和缺失信息。</dd>
-              </div>
-              <div>
-                <dt>最终报告</dt>
-                <dd>需求、竞品、变现方式与验证步骤，附数据来源。</dd>
-              </div>
-            </dl>
-            <p class="agent-status">
-              目前未配置模型密钥与商业报告任务；本页提供接入说明，尚不能生成商业分析。外部付费工具的数据也未接入。
-            </p>
-            <button class="primary-button" data-view="reports">
-              先阅读已有报告
-            </button>
-          </article>
+          <form id="analysis-form" class="agent-brief integration-form">
+            <label for="analysis-mode">分析工具</label>
+            <select id="analysis-mode"><option value="business">商业分析 Agent</option><option value="doctor">账号诊断 · Doctor 文字流程</option><option value="content">CreatorHub 内容分析</option><option value="overseas">SocialEcho 海外内容分析</option><option value="reports">热点与 GitHub 日报分析</option></select>
+            <p>所有文字分析共用统一设置中的 DeepSeek 配置。平台数据采集需要单独登录或授权；仅提供链接不会自动读取账号或视频。</p>
+            <label for="analysis-question">研究问题</label>
+            <input id="analysis-question" required maxlength="2000" placeholder="例如：这些作品的选题有什么差异？" />
+            <label for="analysis-evidence">文字资料与来源</label>
+            <textarea id="analysis-evidence" required maxlength="40000" rows="9" placeholder="粘贴采集结果、作品文字、互动数据和来源链接。"></textarea>
+            <div class="form-actions"><button type="submit" class="primary-button">生成分析报告</button><button type="button" id="analysis-settings" class="small-button" data-view="settings">配置 DeepSeek</button></div>
+            <p>提交后会把以上资料交给 DeepSeek 分析，并按模型服务计费；当前只分析文字。</p>
+            <p id="analysis-status" role="status" aria-live="polite"></p>
+          </form>
+          <article id="analysis-result" class="agent-brief" hidden><h2 id="analysis-result-title"></h2><p id="analysis-result-meta"></p><pre id="analysis-result-content" class="analysis-output"></pre><button id="download-analysis" class="small-button">下载报告</button></article>
+          <article class="agent-brief"><h2>已保存的分析报告</h2><button id="load-history" class="small-button">读取报告记录</button><div id="analysis-history"></div></article>
+        </section>
+        <section id="settings-view" class="view" hidden aria-labelledby="settings-heading">
+          <div class="page-heading"><div><h1 id="settings-heading">统一 API 设置</h1><p>只配置 DeepSeek，已接入的文字分析工具共用一份配置。</p></div></div>
+          <form id="access-form" class="agent-brief integration-form">
+            <h2>连接私人后台</h2><p>公开网页可阅读日报；修改配置和生成分析需要工作台访问口令。口令只在当前标签页保存。</p>
+            <label for="backend-url">后台地址</label><input id="backend-url" type="url" required value="https://research-hub-api.diozeng157762802.workers.dev" />
+            <label for="access-token">工作台访问口令</label><input id="access-token" type="password" autocomplete="off" required />
+            <div class="form-actions"><button class="primary-button" type="submit">连接后台</button><button id="disconnect-backend" class="small-button" type="button">退出连接</button></div>
+            <p id="connection-status" role="status" aria-live="polite">后台已部署。输入工作台访问口令后连接，再填写 API 密钥。</p>
+          </form>
+          <form id="api-settings-form" class="agent-brief integration-form">
+            <h2>DeepSeek · 一次配置</h2><p id="saved-config-status">连接后台后查看配置状态。已保存的密钥不会回传到网页；留空保留原配置。</p>
+            <label for="deepseek-key">DeepSeek API 密钥</label><input id="deepseek-key" type="password" autocomplete="off" maxlength="256" placeholder="首次填写；以后留空可保留" />
+            <label for="deepseek-model">DeepSeek 模型</label><select id="deepseek-model"><option value="deepseek-flash">DeepSeek Flash</option><option value="deepseek-v4-pro">DeepSeek V4 Pro</option></select>
+            <h3>数据工具授权</h3><label for="socialecho-key">SocialEcho 团队 API 密钥（按需填写）</label><input id="socialecho-key" type="password" autocomplete="off" maxlength="256" />
+            <p>SocialEcho 数据密钥用于读取海外账号资料，与 DeepSeek 模型密钥不同。CreatorHub 仍需独立扫码登录。</p>
+            <div class="form-actions"><button class="primary-button" type="submit">验证并保存配置</button><button id="fetch-socialecho" class="small-button" type="button">读取 SocialEcho 账号与贴文</button></div>
+            <p id="settings-status" role="status" aria-live="polite"></p><pre id="socialecho-data" class="analysis-output" hidden></pre>
+          </form>
         </section>
         <noscript
           ><p>

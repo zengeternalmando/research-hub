@@ -51,6 +51,7 @@ typography:
     fontWeight: 400
     lineHeight: 1.65
 rounded:
+  form-field: "3px"
   tag: "5px"
   control: "6px"
   navigation: "8px"
@@ -102,6 +103,11 @@ components:
   reading-surface:
     backgroundColor: "{colors.white}"
     rounded: "{rounded.surface}"
+  integration-field:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.form-field}"
+    padding: "12px"
 ---
 
 # Design System: 研究工作台
@@ -156,11 +162,13 @@ The serif gives view headings an editorial character; the sans-serif keeps direc
 
 ## Layout
 
-Desktop uses a fixed 236px navigation rail and an offset workspace. The main area has a 1500px maximum width and 36px horizontal gutters. Its reading layout uses a flexible report column, a 240px guide column, and a 28px gap.
+Desktop uses a fixed 236px navigation rail and an offset workspace. The main area has a 1500px maximum width and 36px horizontal gutters. The report occupies one flexible column across the available reading width.
 
-At 1600px and above, the rail becomes 252px and the guide becomes 280px, with a 36px column gap. At 1200px and below, the guide moves beneath the report into two columns; directory state and action columns also narrow.
+At 1600px and above, the rail becomes 252px. At 1200px and below, directory state and action columns narrow; the report remains one column.
 
-At 800px and below, navigation becomes a horizontal scrolling strip above the workspace. The workspace offset disappears, gutters become 22px, headings stack, and the guide becomes one column. Directory descriptions span the full row above status and action; controls stack vertically. Agent definition rows also stack. The embedded report keeps its own scrolling region.
+At 800px and below, navigation becomes a horizontal scrolling strip above the workspace. The workspace offset disappears, gutters become 22px, and headings stack. Directory descriptions span the full row above status and action; directory controls stack vertically. The embedded report keeps its own scrolling region.
+
+Settings and analysis forms are single-column white panels with a 12px internal gap and a 920px maximum form width. Adjacent panels have 24px separation. Their action rows wrap with a 12px gap, allowing controls to fit narrower screens.
 
 ## Elevation & Depth
 
@@ -168,13 +176,13 @@ The system has no box shadows. Dark navigation, white plates, pale tab strips, a
 
 ## Shapes
 
-Large contained surfaces use the surface radius; navigation and search use the navigation radius; filled actions and selects use the control radius. Status tags use the smaller tag radius. Directory rows stay flat and divided rather than becoming individual cards. Icons are thin inline SVG strokes with rounded ends.
+Large contained surfaces use the surface radius; navigation and search use the navigation radius; filled actions and directory selects use the control radius. Settings and analysis fields use the tighter form-field radius. Status tags use the smaller tag radius. Directory rows stay flat and divided rather than becoming individual cards. Icons are thin inline SVG strokes with rounded ends.
 
 ## Components
 
 ### Buttons
 
-Filled actions are compact forest-green controls with white text, the control radius, and a minimum 44px height. Hover deepens their background. Text actions use forest-green text without a filled plate and underline on hover. Small toolbar actions are quieter, with a minimum 32px height. Interactive elements share a three-pixel focus outline offset by four pixels.
+Filled actions are compact forest-green controls with white text, the control radius, and a minimum 44px height. Hover deepens their background. Text actions use forest-green text without a filled plate and underline on hover. Small toolbar actions are quieter, with a minimum 32px height. Buttons, links, inputs, and selects share a three-pixel focus outline offset by four pixels. Disabled buttons use half opacity and a not-allowed cursor.
 
 ### Chips
 
@@ -182,11 +190,17 @@ Status tags have compact padding and softly rounded corners. Integrated reports 
 
 ### Cards / Containers
 
-The report reader and Agent explanation use white, fine borders, and the surface radius. The reader clips its tab strip within the rounded perimeter. The Agent explanation uses 32px padding, reduced to 24px vertically and 20px horizontally on mobile. These containers have no hover lift.
+The report reader, settings forms, and analysis panels use white, fine borders, and the surface radius. The reader clips its tab strip within the rounded perimeter. Form and analysis panels use 32px padding, reduced to 24px vertically and 20px horizontally on mobile. These containers have no hover lift.
 
 ### Inputs / Fields
 
 Search is a white stroked field with an inline SVG icon and a transparent text input. It has a maximum width of 480px on desktop and fills available width on mobile. Category selection uses a native select with the control radius. Keyboard focus uses the shared focus treatment.
+
+Settings and analysis fields are full-width white inputs, native selects, and textareas with a fine divider-colored border and the form-field radius. Each field has 12px padding and a semibold label above it. Textareas use body typography and resize vertically. Input and select focus use the shared treatment; textarea focus currently uses the browser default.
+
+### Analysis Output
+
+Text results preserve line breaks, wrap long content anywhere, and use body typography with a 1.8 line height. Results and saved-report records sit in the same flat white panel vocabulary as the forms.
 
 ### Navigation
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-09T15:06:27.916Z",
+  "generatedAt": "2026-10-09T15:27:11.0418595Z",
   "title": "Design System: 研究工作台",
   "extensions": {
     "colorMeta": {
@@ -335,7 +335,7 @@
         "value": "1600px"
       },
       {
-        "name": "guide-stack",
+        "name": "directory-compact",
         "value": "1200px"
       },
       {
@@ -422,6 +422,14 @@
       "description": "Divided information, status, and entry columns.",
       "html": "<article class=\"ds-row\"><div><h2>TrendRadar</h2><p>阅读已部署的热点报告。</p></div><span class=\"ds-tag ds-tag-integrated\">报告已接入</span><a href=\"#report\">在此阅读</a></article>",
       "css": ".ds-row{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;display:grid;grid-template-columns:minmax(0,1fr) 130px 130px;gap:24px;align-items:center;padding:24px 20px;border-bottom:1px solid var(--line,#dce3dd);color:var(--ink,#25322e)}.ds-row:hover{background:#edf2eb}.ds-row h2{font-size:17px;font-weight:600;margin:0 0 7px}.ds-row p{font-size:12px;color:var(--muted,#57655f);max-width:70ch;margin:0}.ds-row a{display:inline-flex;align-items:center;min-height:40px;font-size:12px;color:var(--accent,#236249);text-decoration:none}.ds-row a:hover{text-decoration:underline}.ds-tag{display:inline-block;padding:4px 8px;border-radius:5px;font-size:12px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;line-height:1.65;background:var(--tag-bg,#e5ebe4);color:var(--tag-ink,#48594d);white-space:nowrap}.ds-tag-integrated{background:var(--integrated-bg,#e2eee5);color:var(--integrated-ink,#225238)}.ds-tag-pending{background:var(--pending-bg,#f1e7d4);color:var(--pending-ink,#714f1e)}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-search input:focus-visible,.ds-nav button:focus-visible,.ds-tabs button:focus-visible,.ds-row a:focus-visible{outline:3px solid var(--focus,#b37b2a);outline-offset:4px}@media(max-width:800px){.ds-row{grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:20px 0}.ds-row>div{grid-column:1/-1}.ds-row a{justify-self:end}}"
+    },
+    {
+      "name": "Integration Form",
+      "kind": "input",
+      "refersTo": "integration-field",
+      "description": "Single-column settings and text-analysis fields with wrapping actions.",
+      "html": "<form class=\"ds-form\"><label for=\"ds-question\">研究问题</label><input id=\"ds-question\" placeholder=\"例如：这些作品的选题有什么差异？\"><label for=\"ds-evidence\">文字资料与来源</label><textarea id=\"ds-evidence\" rows=\"4\" placeholder=\"粘贴作品文字和来源链接。\"></textarea><div class=\"ds-actions\"><button class=\"ds-submit\" type=\"button\">生成分析报告</button></div></form>",
+      "css": ".ds-form{max-width:920px;display:flex;flex-direction:column;gap:12px;padding:32px;background:var(--white,#fff);color:var(--ink,#25322e);border:1px solid var(--line,#dce3dd);border-radius:12px;font:15px/1.65 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif}.ds-form label{font-weight:600}.ds-form input,.ds-form select,.ds-form textarea{box-sizing:border-box;width:100%;padding:12px;border:1px solid var(--line,#dce3dd);background:var(--white,#fff);color:var(--ink,#25322e);border-radius:3px;font:inherit}.ds-form textarea{resize:vertical}.ds-form input:focus-visible,.ds-form select:focus-visible,.ds-submit:focus-visible{outline:3px solid #b37b2a;outline-offset:4px}.ds-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.ds-submit{background:var(--accent,#236249);color:var(--white,#fff);border:0;border-radius:6px;padding:11px 20px;font:13px/1.65 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Microsoft YaHei\",\"PingFang SC\",sans-serif;min-height:44px;cursor:pointer}.ds-submit:hover{background:#194c37}.ds-submit:disabled{opacity:.5;cursor:not-allowed}@media(max-width:800px){.ds-form{padding:24px 20px}}"
     }
   ],
   "narrative": {

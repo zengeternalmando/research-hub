@@ -18,8 +18,8 @@ then choose a tool by research purpose. Each entry distinguishes a live report, 
 repository requiring deployment, and an external service requiring its own account.
 
 FIRST VIEWPORT: On desktop, 236px dark navigation on the left; a moderate headline and
-two report tabs above the main embedded reading plate; a narrow research path and
-shortcuts on the right. On mobile, navigation becomes a horizontal strip and the
+two report tabs above a full-width embedded reading plate. The user explicitly removed
+the right research path and shortcuts. On mobile, navigation becomes a horizontal strip and the
 report receives the full reading width. The signature interaction is switching a
 verified public report without leaving the desk, with explicit loading and recovery.
 
@@ -38,9 +38,20 @@ Mobile 390×844: report and full tool directory. Report sources are actual publi
 pages. Browser DOM and screenshots verified switching, search, empty state, public
 links, and absence of document horizontal overflow.
 
-## Finish review
+## Finish review — initial version
 
 Disposition: ship. Reviewed desktop reports, GitHub report, directory and Agent view,
 plus mobile report and directory. Resolved mobile heading composition, metadata
 readability, view focus, combined filtering and platform findability. Font asset
 format matches its source declaration. Script checks and two search/data tests pass.
+
+## Follow-up integration scope
+
+The right rail is removed and a shared DeepSeek settings form plus text analysis
+workflows are deployed. The private backend passes local checks and live health,
+authorized configuration/report reads, and access rejection checks. Real provider calls with owner keys,
+CreatorHub browser-host deployment and platform authentication remain unfinished.
+No frontend or code review verdict establishes completion of those external steps.
+
+Follow-up finish disposition: ship. Session isolation, concurrent report persistence and
+updated direction contract were reviewed; seven checks pass. External steps above remain pending.
