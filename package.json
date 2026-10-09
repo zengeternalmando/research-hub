@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check app.js && node --check integrations.js && node --check backend/worker.js && node --test tests/*.test.js"
+    "check": "node --check app.js && node --test tests/*.test.js"
   }
 }

@@ -83,11 +83,6 @@
         <button class="nav-item" data-view="tools" data-category="commerce">
           <svg aria-hidden="true"><use href="#chart-icon" /></svg>商业化验证
         </button>
-        <button class="nav-item" data-view="agent">
-          <svg aria-hidden="true"><use href="#research-icon" /></svg>商业分析
-          Agent
-        </button>
-        <button class="nav-item" data-view="settings"><svg aria-hidden="true"><use href="#research-icon" /></svg>统一 API 设置</button>
       </nav>
       <div class="sidebar-bottom">
         <span class="availability-dot"></span>
@@ -251,65 +246,6 @@
           </p>
         </section>
 
-        <section
-          id="agent-view"
-          class="view"
-          hidden
-          aria-labelledby="agent-heading"
-        >
-          <div class="page-heading">
-            <div>
-              <h1 id="agent-heading">商业分析 Agent</h1>
-              <p>让结论有证据，让下一步可以验证。</p>
-            </div>
-            <span class="state-tag pending" id="agent-connection">等待连接后台</span>
-          </div>
-          <form id="analysis-form" class="agent-brief integration-form">
-            <label for="analysis-mode">分析工具</label>
-            <select id="analysis-mode"><option value="business">商业分析 Agent</option><option value="doctor">账号诊断 · Doctor 文字流程</option><option value="content">CreatorHub 内容分析</option><option value="overseas">SocialEcho 海外内容分析</option><option value="reports">热点与 GitHub 日报分析</option></select>
-            <p>所有文字分析共用统一设置中的 DeepSeek 配置。平台数据采集需要单独登录或授权；仅提供链接不会自动读取账号或视频。</p>
-            <label for="analysis-question">研究问题</label>
-            <input id="analysis-question" required maxlength="2000" placeholder="例如：这些作品的选题有什么差异？" />
-            <label for="analysis-evidence">文字资料与来源</label>
-            <textarea id="analysis-evidence" required maxlength="40000" rows="9" placeholder="粘贴采集结果、作品文字、互动数据和来源链接。"></textarea>
-            <div class="form-actions"><button type="submit" class="primary-button">生成分析报告</button><button type="button" id="analysis-settings" class="small-button" data-view="settings">配置 DeepSeek</button></div>
-            <p>提交后会把以上资料交给 DeepSeek 分析，并按模型服务计费；当前只分析文字。</p>
-            <p id="analysis-status" role="status" aria-live="polite"></p>
-          </form>
-          <article id="analysis-result" class="agent-brief" hidden><h2 id="analysis-result-title"></h2><p id="analysis-result-meta"></p><pre id="analysis-result-content" class="analysis-output"></pre><button id="download-analysis" class="small-button">下载报告</button></article>
-          <article class="agent-brief"><h2>已保存的分析报告</h2><button id="load-history" class="small-button">读取报告记录</button><div id="analysis-history"></div></article>
-        </section>
-        <section id="settings-view" class="view" hidden aria-labelledby="settings-heading">
-          <div class="page-heading"><div><h1 id="settings-heading">统一 API 设置</h1><p>只配置 DeepSeek，已接入的文字分析工具共用一份配置。</p></div></div>
-          <form id="access-form" class="agent-brief integration-form">
-            <h2>连接私人后台</h2><p>公开网页可阅读日报；修改配置和生成分析需要工作台访问口令。口令只在当前标签页保存。</p>
-            <label for="backend-url">后台地址</label><input id="backend-url" type="url" required value="https://research-hub-api.diozeng157762802.workers.dev" />
-            <label for="access-token">工作台访问口令</label><input id="access-token" type="password" autocomplete="off" required />
-            <div class="form-actions"><button class="primary-button" type="submit">连接后台</button><button id="disconnect-backend" class="small-button" type="button">退出连接</button></div>
-            <p id="connection-status" role="status" aria-live="polite">后台已部署。输入工作台访问口令后连接，再填写 API 密钥。</p>
-          </form>
-          <form id="api-settings-form" class="agent-brief integration-form">
-            <h2>DeepSeek · 一次配置</h2><p id="saved-config-status">连接后台后查看配置状态。已保存的密钥不会回传到网页；留空保留原配置。</p>
-            <label for="deepseek-key">DeepSeek API 密钥</label><input id="deepseek-key" type="password" autocomplete="off" maxlength="256" placeholder="首次填写；以后留空可保留" />
-            <label for="deepseek-model">DeepSeek 模型</label><select id="deepseek-model"><option value="deepseek-flash">DeepSeek Flash</option><option value="deepseek-v4-pro">DeepSeek V4 Pro</option></select>
-            <h3>数据工具授权</h3><label for="socialecho-key">SocialEcho 团队 API 密钥（按需填写）</label><input id="socialecho-key" type="password" autocomplete="off" maxlength="256" />
-            <p>SocialEcho 数据密钥用于读取海外账号资料，与 DeepSeek 模型密钥不同。CreatorHub 仍需独立扫码登录。</p>
-            <div class="form-actions"><button class="primary-button" type="submit">验证并保存配置</button><button id="fetch-socialecho" class="small-button" type="button">读取 SocialEcho 账号与贴文</button></div>
-            <p id="settings-status" role="status" aria-live="polite"></p><pre id="socialecho-data" class="analysis-output" hidden></pre>
-          </form>
-        </section>
-        <noscript
-          ><p>
-            请启用 JavaScript 以切换工具与报告。你仍可直接访问
-            <a href="https://zengeternalmando.github.io/TrendRadar/"
-              >热点报告</a
-            >
-            和
-            <a href="https://zengeternalmando.github.io/github-research/"
-              >GitHub 日报</a
-            >。
-          </p></noscript
-        >
       </main>
       <footer class="workspace-footer">
         <span>研究工作台 · 公共报告与工具导航</span

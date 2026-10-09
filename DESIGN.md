@@ -51,7 +51,6 @@ typography:
     fontWeight: 400
     lineHeight: 1.65
 rounded:
-  form-field: "3px"
   tag: "5px"
   control: "6px"
   navigation: "8px"
@@ -103,11 +102,6 @@ components:
   reading-surface:
     backgroundColor: "{colors.white}"
     rounded: "{rounded.surface}"
-  integration-field:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.form-field}"
-    padding: "12px"
 ---
 
 # Design System: 研究工作台
@@ -118,7 +112,7 @@ components:
 
 Dark forest navigation frames a cool, light reading workspace. The visual language is quiet and practical: a serif headline introduces each view, while compact sans-serif controls and metadata support sustained reading.
 
-Depth comes from distinct surface tones and fine dividers. Tool entries use aligned directory rows; large white containers hold reading content or a detailed explanation. Public report pages retain their own visual systems inside the embedded reader.
+Depth comes from distinct surface tones and fine dividers. Tool entries use aligned directory rows; the large white container holds reading content. Public report pages retain their own visual systems inside the embedded reader.
 
 **Key Characteristics:**
 - Dark navigation beside light reading surfaces.
@@ -156,7 +150,7 @@ The serif gives view headings an editorial character; the sans-serif keeps direc
 ### Hierarchy
 - **Headline:** the frontmatter headline role; reduced to 29px at the mobile breakpoint.
 - **Title:** directory names use the title role; mobile names reduce to 16px. Section headings range from 16px to 21px in their existing contexts.
-- **Body:** the frontmatter base role; explanatory content commonly uses 13–14px. Tool-purpose and Agent prose are limited to 70ch.
+- **Body:** the frontmatter base role; supporting content uses smaller contextual sizes. Tool-purpose text is limited to 70ch.
 - **Control:** navigation and main action text use the control role.
 - **Metadata:** status tags, source notes, tool purpose, and smaller links use the metadata role. Narrow toolbar descriptions use 11px.
 
@@ -168,7 +162,6 @@ At 1600px and above, the rail becomes 252px. At 1200px and below, directory stat
 
 At 800px and below, navigation becomes a horizontal scrolling strip above the workspace. The workspace offset disappears, gutters become 22px, and headings stack. Directory descriptions span the full row above status and action; directory controls stack vertically. The embedded report keeps its own scrolling region.
 
-Settings and analysis forms are single-column white panels with a 12px internal gap and a 920px maximum form width. Adjacent panels have 24px separation. Their action rows wrap with a 12px gap, allowing controls to fit narrower screens.
 
 ## Elevation & Depth
 
@@ -176,13 +169,13 @@ The system has no box shadows. Dark navigation, white plates, pale tab strips, a
 
 ## Shapes
 
-Large contained surfaces use the surface radius; navigation and search use the navigation radius; filled actions and directory selects use the control radius. Settings and analysis fields use the tighter form-field radius. Status tags use the smaller tag radius. Directory rows stay flat and divided rather than becoming individual cards. Icons are thin inline SVG strokes with rounded ends.
+Large contained reading surfaces use the surface radius; navigation and search use the navigation radius; filled actions and category selects use the control radius. Status tags use the smaller tag radius. Directory rows stay flat and divided rather than becoming individual cards. Icons are thin inline SVG strokes with rounded ends.
 
 ## Components
 
 ### Buttons
 
-Filled actions are compact forest-green controls with white text, the control radius, and a minimum 44px height. Hover deepens their background. Text actions use forest-green text without a filled plate and underline on hover. Small toolbar actions are quieter, with a minimum 32px height. Buttons, links, inputs, and selects share a three-pixel focus outline offset by four pixels. Disabled buttons use half opacity and a not-allowed cursor.
+Filled actions are compact forest-green controls with white text, the control radius, and a minimum 44px height. Hover deepens their background. Text actions use forest-green text without a filled plate and underline on hover. Small toolbar actions are quieter, with a minimum 32px height. Buttons, links, inputs, and selects share a three-pixel focus outline offset by four pixels.
 
 ### Chips
 
@@ -190,17 +183,12 @@ Status tags have compact padding and softly rounded corners. Integrated reports 
 
 ### Cards / Containers
 
-The report reader, settings forms, and analysis panels use white, fine borders, and the surface radius. The reader clips its tab strip within the rounded perimeter. Form and analysis panels use 32px padding, reduced to 24px vertically and 20px horizontally on mobile. These containers have no hover lift.
+The report reader uses white, fine borders, and the surface radius. The reader clips its tab strip within the rounded perimeter. These containers have no hover lift.
 
 ### Inputs / Fields
 
 Search is a white stroked field with an inline SVG icon and a transparent text input. It has a maximum width of 480px on desktop and fills available width on mobile. Category selection uses a native select with the control radius. Keyboard focus uses the shared focus treatment.
 
-Settings and analysis fields are full-width white inputs, native selects, and textareas with a fine divider-colored border and the form-field radius. Each field has 12px padding and a semibold label above it. Textareas use body typography and resize vertically. Input and select focus use the shared treatment; textarea focus currently uses the browser default.
-
-### Analysis Output
-
-Text results preserve line breaks, wrap long content anywhere, and use body typography with a 1.8 line height. Results and saved-report records sit in the same flat white panel vocabulary as the forms.
 
 ### Navigation
 
@@ -226,3 +214,4 @@ Tool information, connection status, and an entry action align in three desktop 
 - **Don't** add shadows or hover lift to the flat reading containers.
 - **Don't** turn every tool directory row into a promotional card.
 - **Don't** replace readable status text with color alone.
+

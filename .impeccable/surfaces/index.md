@@ -45,13 +45,11 @@ plus mobile report and directory. Resolved mobile heading composition, metadata
 readability, view focus, combined filtering and platform findability. Font asset
 format matches its source declaration. Script checks and two search/data tests pass.
 
-## Follow-up integration scope
+## Current scope after integration removal
 
-The right rail is removed and a shared DeepSeek settings form plus text analysis
-workflows are deployed. The private backend passes local checks and live health,
-authorized configuration/report reads, and access rejection checks. Real provider calls with owner keys,
-CreatorHub browser-host deployment and platform authentication remain unfinished.
-No frontend or code review verdict establishes completion of those external steps.
-
-Follow-up finish disposition: ship. Session isolation, concurrent report persistence and
-updated direction contract were reviewed; seven checks pass. External steps above remain pending.
+The user removed API settings, private-backend connection and in-browser analysis.
+Only full-width daily report reading and the tool directory remain. CreatorHub and
+Doctor retain entries for local application and Agent skill usage respectively.
+The analysis service is retired without deleting stored data. The user explicitly
+cancelled report synchronization; no synchronization or unattended pipeline is added.
+Existing visual identity remains unchanged.

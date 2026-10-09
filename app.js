@@ -1,4 +1,3 @@
-import { initializeIntegrations } from "./integrations.js";
 export const tools = [
   {
     name: "TrendRadar",
@@ -22,28 +21,25 @@ export const tools = [
   },
   {
     name: "CreatorHub",
-    analysis: "content",
     category: "domestic",
     module: "国内内容监测",
     purpose:
       "抖音、小红书、快手与视频号的内容管理和监测项目。实际采集需部署并登录。",
     status: "项目入口",
-    note: "尚未部署接入",
+    note: "在本机运行并登录平台",
     url: "https://github.com/3441293738/creatorhub",
   },
   {
     name: "social-account-doctor",
-    analysis: "doctor",
     category: "accounts",
     module: "同类账号研究",
-    purpose: "小红书、抖音等平台的账号诊断、爆款拆解与同赛道对标研究工具。",
+    purpose: "用于 Agent 的账号诊断、爆款拆解与同赛道对标研究技能，支持小红书、抖音等平台。",
     status: "项目入口",
-    note: "尚未接入账号数据",
+    note: "在 Agent 中使用技能",
     url: "https://github.com/JuneYaooo/social-account-doctor",
   },
   {
     name: "SocialEcho",
-    analysis: "overseas",
     category: "overseas",
     module: "海外内容监测",
     purpose: "进入海外社交媒体内容管理与监测服务，使用自己的账号连接平台。",
@@ -127,13 +123,11 @@ function initializeDesk() {
 
   function showView(view, category = "all", resetSearch = true) {
     const changedView = $(`#${view}-view`).hidden;
-    for (const name of ["reports", "tools", "agent", "settings"])
+    for (const name of ["reports", "tools"])
       $(`#${name}-view`).hidden = name !== view;
     const names = {
       reports: "今日报告",
       tools: "工具目录",
-      agent: "商业分析 Agent",
-      settings: "统一 API 设置",
     };
     $("#breadcrumb").textContent = `工作台 / ${names[view]}`;
     for (const button of document.querySelectorAll(".nav-item")) {
@@ -199,14 +193,6 @@ function initializeDesk() {
         action.rel = "noopener noreferrer";
       }
       row.append(action);
-      if (tool.analysis) {
-        const analyze = document.createElement("button");
-        analyze.className = "small-button";
-        analyze.textContent = "分析资料";
-        analyze.setAttribute("aria-label", `分析资料：${tool.name}`);
-        analyze.addEventListener("click", () => document.dispatchEvent(new CustomEvent("open-tool-analysis", {detail:tool.analysis})));
-        row.querySelector(".tool-information").append(analyze);
-      }
       list.append(row);
     }
   }
@@ -312,7 +298,6 @@ function initializeDesk() {
     loadReport(selectedReport),
   );
   renderTools();
-  initializeIntegrations(showView);
   loadReport(selectedReport);
 }
 

@@ -613,45 +613,14 @@ p {
 .primary-button:hover {
   background: #194c37;
 }
-.agent-brief {
-  max-width: 820px;
-  padding: 32px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-}
-.agent-brief h2 {
-  font-size: 20px;
-}
-.agent-brief > p {
-  font-size: 14px;
-  color: var(--muted);
-  max-width: 70ch;
-}
-.agent-brief dl {
-  margin: 30px 0;
-}
-.agent-brief dl > div {
-  display: grid;
-  grid-template-columns: 100px minmax(0, 1fr);
-  gap: 24px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
-}
-.agent-brief dt {
-  font-size: 13px;
-  font-weight: 600;
-}
-.agent-brief dd {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 0;
-}
-.agent-status {
-  background: #f7f3e9;
-  padding: 18px;
-  color: #6b5428 !important;
-}
+
+
+
+
+
+
+
+
 .workspace-footer {
   display: flex;
   justify-content: space-between;
@@ -854,16 +823,9 @@ p {
     flex-direction: column;
     gap: 5px;
   }
-  .agent-brief {
-    padding: 24px 20px;
-  }
-  .agent-brief dl > div {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-  .agent-brief > p {
-    font-size: 13px;
-  }
+
+
+
 }
 @media (prefers-reduced-motion: no-preference) {
   .view {
@@ -878,15 +840,3 @@ p {
     }
   }
 }
-
-.integration-form { max-width: 920px; display: flex; flex-direction: column; gap: 12px; }
-.integration-form input, .integration-form select, .integration-form textarea { width: 100%; padding: 12px; border: 1px solid var(--line); background: var(--white); color: var(--ink); border-radius: 3px; }
-.integration-form textarea { resize: vertical; font: inherit; }
-.integration-form label { font-weight: 600; }
-.integration-form p { margin: 0 0 8px; }
-.form-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.analysis-output { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.8; }
-button:disabled { opacity: 0.5; cursor: not-allowed; }
-#agent-view .agent-brief + .agent-brief,
-#settings-view .agent-brief + .agent-brief { margin-top: 24px; }
-#analysis-history button { display: block; margin: 12px 0; text-align: left; }
